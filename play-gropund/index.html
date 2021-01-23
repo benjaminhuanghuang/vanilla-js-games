@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="breakout" width="400" height="500"></canvas>
+
+
+  <script>
+    // SELECT CANVAS ELEMENT
+    const cvs = document.getElementById("breakout");
+    const ctx = cvs.getContext("2d");
+
+    // ADD BORDER TO CANVAS
+    cvs.style.border = "1px solid #0ff";
+
+    // MAKE LINE THIK WHEN DRAWING TO CANVAS
+    ctx.lineWidth = 3;
+
+  </script>
+</body>
+
+</html>
