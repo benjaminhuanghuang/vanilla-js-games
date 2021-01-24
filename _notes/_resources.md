@@ -5,7 +5,9 @@
 - https://opengameart.org/
 
 
-- [Flip the image for 2D spirte](https://onlinepngtools.com/flip-png-vertically)
+- [Flip the image for 2D spirte]
+  - https://onlinepngtools.com/flip-png-vertically
+  - https://onlinepngtools.com/flip-png-horizontally
 
 
 
