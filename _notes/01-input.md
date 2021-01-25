@@ -1,12 +1,13 @@
 
 ## Key
+Response to input
+``` 
+  document.addEventListener("keydown", inputHandeler);
 
+  function inputHandler(event) {
 
-
-
-
-
-
+  }
+```
 
 
 ## Mouse

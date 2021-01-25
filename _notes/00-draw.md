@@ -78,11 +78,3 @@ Move object
   drawRect(x1, y1);
 ```
 
-Response to input
-``` 
-  document.addEventListener("keydown", inputHandeler);
-
-  function inputHandler(event) {
-
-  }
-```
