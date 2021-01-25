@@ -7,7 +7,7 @@ const ctx = canvas.getContext("2d");
 
 canvas.width = canvas.height = 400;
 
-const FRAME = 6;
+const FRAME = 3;
 const SCALE = 20;
 const COLUMNS = canvas.width / SCALE;
 const ROWS = canvas.height / SCALE;
@@ -28,6 +28,9 @@ function init() {
   randomFood();
 }
 
+function end() {
+  velocity = { x: 0, y: 0 };
+}
 init();
 
 function randomFood() {
@@ -66,6 +69,7 @@ setInterval(() => {
 }, 1000 / FRAME);
 
 function gameLoop() {
+  // fill background
   ctx.fillStyle = BG_COLOUR;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -94,11 +98,11 @@ function gameLoop() {
   }
 
   if (pos.x < 0) {
-    pos.x = COLUMNS;
+    pos.x = COLUMNS - 1;
   }
 
   if (pos.y < 0) {
-    pos.y = ROWS;
+    pos.y = ROWS - 1;
   }
 
   // eat
@@ -113,10 +117,10 @@ function gameLoop() {
   if (velocity.x || velocity.y) {
     for (let cell of snake) {
       if (cell.x === pos.x && cell.y === pos.y) {
-        return init();
+        return end();
       }
     }
     snake.push({ ...pos });
-    snake.shift();
+    snake.shift(); // remove item from the beginning
   }
 }
