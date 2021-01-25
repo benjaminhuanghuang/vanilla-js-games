@@ -1,6 +1,6 @@
 
 
-
+## Method 1
 ```
   /*
     main loop
@@ -15,4 +15,13 @@
     requestAnimationFrame(mainLoop);
   }
   mainLoop();
+```
+
+
+##  Method 2
+```
+setInterval(() => {
+  requestAnimationFrame(gameLoop);
+}, 1000 / FR);
+
 ```
